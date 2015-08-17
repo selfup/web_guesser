@@ -8,10 +8,13 @@ def number
 end
 
 def check_guess(guess)
-	guess = guess.to_i
+	guess = guess.to_i unless guess.nil?
 	too_high = number + 5
 	too_low = number - 5
-	if guess == number
+	if guess.nil?
+		"Guess away!"
+	elsif
+		guess == number
 		"You got it right!
 		The SECRET NUMBER is: <strong>#{number}</strong>"
 	elsif guess >= too_high
