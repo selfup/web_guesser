@@ -12,7 +12,7 @@ def check_guess(guess)
 	too_high = number + 5
 	too_low = number - 5
 	if guess.nil?
-		"Guess away!"
+		"Take a guess!"
 	elsif
 		guess == number
 		"You got it right!
@@ -30,8 +30,25 @@ def check_guess(guess)
 	end
 end
 
+def color_guess
+	if @@message == "Way too low!" || "Way too high!"
+		"background-color:#F0501A"
+	elsif @@message == "Too low!" || "Too high!"
+		"background-color:#D4A190"
+	elsif @@message == "You got it right!
+										The SECRET NUMBER is: <strong>#{number}</strong>"
+	  "background-color:#A1D490"
+	else
+		"background-color:#90C3D4"
+	end
+end
+
 get '/' do
 	guess = params["guess"]
-	message = check_guess(guess)
-	erb :index, :locals => {:number => SECRET_NUMBER, :message => message}
+	@@message = check_guess(guess)
+	erb :index, :locals => {
+			:number => SECRET_NUMBER,
+		  :message => @@message,
+		  :color_guess => color_guess
+		}
 end
