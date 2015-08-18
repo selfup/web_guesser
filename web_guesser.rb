@@ -31,12 +31,11 @@ def check_guess(guess)
 end
 
 def color_guess
-	if @@message == "Way too low!" || "Way too high!"
+	if @@message == "Way too low!" || @@message == "Way too high!"
 		"background-color:#F0501A"
-	elsif @@message == "Too low!" || "Too high!"
+	elsif @@message == "Too low!" || @@message == "Too high!"
 		"background-color:#D4A190"
-	elsif @@message == "You got it right!
-										The SECRET NUMBER is: <strong>#{number}</strong>"
+	elsif @@message.start_with?("You") 
 	  "background-color:#A1D490"
 	else
 		"background-color:#90C3D4"
