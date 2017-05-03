@@ -1,6 +1,6 @@
 module WebGuesser
   class Server < Sinatra::Base
-    SOME_DATA_ENDPOINT = "/api/v1/some_data.json"
+    SOME_DATA_ENDPOINT = "/sinatra/api/v1/some_data.json"
 
 		def js_bundle
 			if ENV['SINATRA_ENV'] == "production"
