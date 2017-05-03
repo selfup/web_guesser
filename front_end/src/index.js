@@ -11,7 +11,9 @@ const render = (data) => {
   `;
 };
 
-axios.get('/api/v1/some_data.json')
+const endpoint = app.dataset.someDataEndpoint;
+
+axios.get(endpoint)
   .then((res) => {
     render(res.data);
   })
