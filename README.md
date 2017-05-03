@@ -5,7 +5,7 @@ Introductory Sinatra app that simulates a number guessing game that has now been
 
   `$ bundle`
 
-  `$ ruby web_guesser.rb`
+  `$ ruby main.rb`
 
 Go to your browser
 
