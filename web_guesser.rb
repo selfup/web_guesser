@@ -3,7 +3,7 @@ require "sinatra/json"
 require 'sinatra/reloader'
 
 get '/' do
-	erb :index
+	erb :index, locals: { page_name: 'Welcome to ajax land!' }
 end
 
 get '/api/v1/some_data.json' do
