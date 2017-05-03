@@ -8,7 +8,7 @@ module WebGuesser
 			end
 		end
 
-		get '/' do
+		get '/*' do
 			erb :index, locals: {
 				page_name: 'Welcome to ajax land!',
 				script: js_bundle,
