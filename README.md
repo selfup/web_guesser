@@ -1,12 +1,11 @@
 # web_guesser
-Introductory Sinatra app that simulates a number guessing game
+Introductory Sinatra app that simulates a number guessing game that has now been changed to be an ajax example 
 
 # Setup
-If you do not have bundler, do the following:
 
-    `$ gem install bundler && bundle`
+  `$ bundle`
 
-    `$ ruby web_guesser.rb`
+  `$ ruby web_guesser.rb`
 
 Go to your browser
 
