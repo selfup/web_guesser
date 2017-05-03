@@ -2,7 +2,7 @@ module WebGuesser
   class Server < Sinatra::Base
 		def js_bundle
 			if ENV['SINATRA_ENV'] == "production"
-				"bundle.js"
+				"prod/bundle.js"
 			else
 				"http://localhost:8080/bundle.js"
 			end
