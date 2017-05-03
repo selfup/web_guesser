@@ -1,8 +1,10 @@
+require 'pry'
 include AssetBundleModule
 
 module WebGuesser
   class Server < Sinatra::Base
-    SOME_DATA_ENDPOINT = "/sinatra/api/v1/some_data.json"
+    NUMBERS = "/sinatra/api/v1/numbers.json"
+    UPDATE_NUMBER_ONE = "/sinatra/api/v1/update_number_one.json"
 
     get "/" do
       erb :dom_events, locals: {
@@ -15,13 +17,25 @@ module WebGuesser
 				page_name: 'Welcome to ajax land!',
 				script: js_bundle,
         css: css_bundle,
-        some_data_endpoint: SOME_DATA_ENDPOINT,
+        numbers: NUMBERS,
+        update_number_one: UPDATE_NUMBER_ONE,
 			}
 		end
 
-		get SOME_DATA_ENDPOINT do
+    post UPDATE_NUMBER_ONE do
       content_type :json
-		  { :key1 => 'value1', :key2 => 'value2' }.to_json
+      up_down = { "up" => 1, "down" => -1 }
+      direction = request.params["direction"]
+      GlobalState[:number_one] = GlobalState[:number_one] + up_down[direction]
+
+      res = { first_number: GlobalState[:number_one] }
+      res.to_json
+    end
+
+		get NUMBERS do
+      content_type :json
+      res = { first_number: GlobalState[:number_one] }
+      res.to_json
 		end
 	end
 end

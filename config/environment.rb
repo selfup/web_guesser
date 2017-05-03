@@ -13,6 +13,10 @@ Dir[APP_ROOT.join('controllers', '*.rb')].each { |file| require file }
 
 # configure Server settings
 module WebGuesser
+  GlobalState = {}
+  GlobalState[:number_one] = 0
+  GlobalState[:number_two] = 5
+
   class Server < Sinatra::Base
     set :method_override, true
     set :root, APP_ROOT.to_path

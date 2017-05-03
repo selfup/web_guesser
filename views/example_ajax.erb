@@ -5,7 +5,13 @@
   <body>
     <a href="/">Back to Dom Events</a>
     <h1><%= page_name %></h1>
-    <div id="app" data-some-data-endpoint="<%= some_data_endpoint %>"></div>
+    <div
+      id="app"
+      data-numbers="<%= numbers %>"
+      data-update-number-one="<%= update_number_one %>"
+    >
+      <!-- store variables given by the server here for single source of truth -->
+    </div>
     <script src="<%= script %>"></script>
    </body>
 </html>
