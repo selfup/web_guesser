@@ -1,5 +1,5 @@
 # web_guesser
-Introductory Sinatra app that simulates a number guessing game that has now been changed to be an ajax example 
+Introductory Sinatra app that simulates a number guessing game that has now been changed to be an ajax example
 
 # Setup
 
