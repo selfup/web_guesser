@@ -26,9 +26,17 @@ Introductory Sinatra app that simulates a number guessing game that has now been
 
   `$ bundle install --without development test`
 
+  If you do not have yarn installed:
+  `$ npm run prod`
+
+  If you have yarn installed:
   `$ yarn run prod`
 
   proxy pass (via apache or nginx) to port **4567** on *127.0.0.1*
+
+  ***
+
+  Production uses WEBrick and can accept 1024 connections by default
 
 ### Enjoy!
 
