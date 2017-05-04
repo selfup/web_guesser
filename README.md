@@ -30,5 +30,5 @@ Introductory Sinatra app that simulates a number guessing game that has now been
 
   proxy pass (via apache or nginx) to port **4567** on *127.0.0.1*
 
-## Enjoy!
+### Enjoy!
 
