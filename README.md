@@ -11,11 +11,20 @@ Introductory Sinatra app that simulates a number guessing game that has now been
 
 ### development
 
+  If you do not have yarn installed:
+  `$ npm start`
+
+  If you have yarn installed:
+  `$ yarn start`
+
+  Then in a new tab/pane/screen
   `$ shotgun`
 
   Go to your browser: [localhost](http://localhost:9393)
 
 ### production
+
+  `$ bundle install --without development test`
 
   `$ yarn run prod`
 
