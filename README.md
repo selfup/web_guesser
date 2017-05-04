@@ -18,7 +18,7 @@ Introductory Sinatra app that simulates a number guessing game that has now been
   `$ yarn start`
 
   Then in a new tab/pane/screen
-  `$ shotgun`
+  `$ bundle exec shotgun`
 
   Go to your browser: [localhost](http://localhost:9393)
 
